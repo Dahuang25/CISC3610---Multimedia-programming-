@@ -9,7 +9,7 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
 var fruit = [{name:"Apple", quantity:20, color:"red"},
-		      	{name:"Orange", quantity:10, color:"orange"},
+     	    {name:"Orange", quantity:10, color:"orange"},
             {name:"Banana", quantity:15, color:"yellow"},
             {name:"Kiwi", quantity:3, color:"green"},
             {name:"Blueberry", quantity:5, color:"blue"},
