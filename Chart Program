@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var fruit = [{name:"Apple", quantity:20, color:"red"},
+		      	{name:"Orange", quantity:10, color:"orange"},
+            {name:"Banana", quantity:15, color:"yellow"},
+            {name:"Kiwi", quantity:3, color:"green"},
+            {name:"Blueberry", quantity:5, color:"blue"},
+            {name:"Grapes", quantity:8, color:"purple"}
+            ];
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+for(i=0;i<fruit.length; i++){
+ctx.font = "16px Arial"
+ctx.fillStyle = fruit[i].color;
+ctx.fillRect(100, 40+(i*30), fruit[i].quantity, 15);
+ctx.fillText(fruit[i].name, 20, 52+(i*30));
+ctx.fillText(fruit[i].quantity, 140, 52+(i*30))
+}
+
+</script>
+
+<p><strong>Note:</strong> The canvas tag is not supported in Internet 
+Explorer 8 and earlier versions.</p>
+
+</body>
+</html>
