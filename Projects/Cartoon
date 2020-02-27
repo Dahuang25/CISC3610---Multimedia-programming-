@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="Cartoon" width="750" height="500"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("Cartoon");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "black";
+ctx.fillRect(0,0,750,150);
+ctx.lineWidth = 5;
+ctx.fillStyle = "grey";
+ctx.fillRect(0,150,750,350);
+
+// Wall
+ctx.strokeRect(475, 340, 150, 110);
+
+// Door
+ctx.fillStyle = "red";
+ctx.fillRect(530, 390, 40, 58);
+ctx.fillStyle = "blue";
+ctx.font = '30px serif';
+ctx.fillText('My House', 490, 490);
+
+// Roof
+ctx.moveTo(450, 340);
+ctx.lineTo(550, 260);
+ctx.lineTo(650, 340);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(100, 70, 50, 0, 2 * Math.PI);
+ctx.fillStyle = "white";
+ctx.fill(); 
+ctx.beginPath();
+ctx.arc(130, 70, 50, 0, 2 * Math.PI);
+ctx.fillStyle = "black";
+ctx.fill();
+
+</script>
+
+</body>
+</html>
